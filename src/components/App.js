@@ -3,7 +3,7 @@ import CoinList from '../components/CoinList';
 
 const App = () => {
     return (
-        <div className="ui container" style={{ marginTop: '60px', fontSize: '2rem' }}>
+        <div className="ui container">
             <CoinList />
         </div>
     );

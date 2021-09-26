@@ -6,7 +6,8 @@ const DEFAULT_COINS = [
     'coinary-token',
     'my-defi-pet',
     'ethereum',
-    'binancecoin'
+    'binancecoin',
+    'wemix-token'
 ];
 
 export const fetchCoins = () => async (dispatch) => {

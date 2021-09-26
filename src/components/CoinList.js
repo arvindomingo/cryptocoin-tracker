@@ -1,3 +1,4 @@
+import './CoinList.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchCoins } from '../actions';
@@ -20,20 +21,20 @@ class CoinList extends React.Component {
                     <td>
                         <h4 className="ui image header">
                             <img src={coin.image} alt={coin.symbol} className="ui mini rounded image" />
-                            <div className="content" style={{ color: '#fff' }}>
+                            <div className="content">
                                 {coin.name}
-                                <div className="sub header" style={{ color: '#fff' }}>{coin.symbol.toUpperCase()}</div>
+                                <div className="sub header">{coin.symbol.toUpperCase()}</div>
                             </div>
                         </h4>
                     </td>
 
-                    <td style={{ fontWeight: 'bolder' }}>
+                    <td className="td-price">
                         ₱ {coin.current_price.toLocaleString('en-US', {
                             minimumFractionDigits: 2,
                             maximumFractionDigits: 2
                         })}
                     </td>
-                    <td style={{ color: `${coin.price_change_percentage_1h_in_currency < 0 ? 'red' : '#96ffae'}` }}>
+                    <td className={{ color: `${coin.price_change_percentage_1h_in_currency < 0 ? 'red' : '#96ffae'}` }}>
                         {coin.price_change_percentage_1h_in_currency.toFixed(1)}%
                     </td>
                     <td style={{ color: `${coin.price_change_percentage_24_in_currency < 0 ? 'red' : '#96ffae'}` }}>
@@ -66,8 +67,8 @@ class CoinList extends React.Component {
         }
 
         return (
-            <div>
-                <h2 style={{ fontSize: '2rem' }}>CryptoCoin Tracker</h2>
+            <div className="coin-wrapper">
+                <h2>CryptoCoin Tracker</h2>
                 <table className="ui inverted teal table">
                     <thead>
                         <tr>
