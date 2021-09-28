@@ -1,14 +1,24 @@
-.coin-wrapper > h2 {
-    font-size: 2rem;
-    margin-top: 20px;
+.coin-wrapper {
+  margin-top: 20px;
+}
+
+.coin-wrapper .main-title {
+  font-size: 2rem;
+  color: #666;
+  padding-top: 5px;
 }
 
 .coin-wrapper > table td .ui.image.header,
 .coin-wrapper > table td .ui.image.header .content > .sub.header {
-    color: #fff;
+  color: #fff;
+}
+
+.coin-wrapper > table td,
+.coin-wrapper > table td .ui.header {
+  font-size: 1.3rem;
 }
 
 .coin-wrapper > table td.td-price {
-    font-size: 1.1rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
