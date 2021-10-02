@@ -1,3 +1,4 @@
+import 'semantic-ui-css/semantic.min.css'
 import React from 'react';
 import CoinList from '../components/CoinList';
 
